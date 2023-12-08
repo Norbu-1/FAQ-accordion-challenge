@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@500&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+
+            font-family: 'Work Sans', sans-serif;
+        }
+
+        body {
+            width: 100vw;
+            height: 100vh;
+            background-image: url("background-pattern-desktop.svg");
+            background-color: hsl(292, 16%, 49%);
+            /* background-attachment: fixed; */
+            background-repeat: no-repeat;
+            background-size: contain;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .box {
+            width: 450px;
+            height: auto;
+            background-color: hsl(0, 0%, 100%);
+            border-radius: 10px;
+            padding: 20px;
+            
+        }
+
+        .box0 img {
+            width: 20px;
+            margin-right: 5px;
+        }
+
+        .box1 {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+        }
+
+        .box1 img {
+            width: 20px;
+            color: hsl(275, 100%, 97%);
+        }
+
+        
+
+        .box2 {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .box2 img {
+            width: 20px;
+            color: hsl(275, 100%, 97%);
+        }
+
+        .box3 {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .box3 img {
+            width: 20px;
+            color: hsl(275, 100%, 97%);
+        }
+
+        .box4 {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .box4 img {
+            width: 20px;
+            color: hsl(275, 100%, 97%);
+        }
+        p{
+            font-size: 15px;
+            color: hsl(292, 16%, 49%);
+            margin-top: 15px;
+        }
+        @media screen and (max-width: 1024px)
+         {
+            body{
+                background-image: url("background-pattern-mobile.svg");
+                background-repeat: no-repeat;
+                background-size: contain;
+                position: relative;
+
+            }
+            .box {
+            width: 85vw;
+            /* height: 100vh; */
+            height: auto;
+            background-color: hsl(0, 0%, 100%);
+            border-radius: 10px;
+            padding: 20px;
+            position: absolute;
+            top: 25%;
+        }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="box0">
+            <h1><img src="icon-star.svg" alt="image"> FAQS</h1>
+        </div>
+        <div class="box1">
+            <h5>What is Frontend Mentor, and how will it help me? </h5>
+            <img src="icon-plus.svg" class="img1" alt="image" onclick="fun1();">
+
+        </div>
+        <p class="classimg1"></p>
+        <div class="box2">
+            <h5>Is Frontend Mentor free?</h5>
+            <img src="icon-plus.svg" alt="image" class="img2" onclick="fun2();" >
+        </div>
+        <p class="classimg2"></p>
+        <div class="box3">
+            <h5>Can I use Frontend Mentor projects in my portfolio</h5>
+            <img src="icon-plus.svg" alt="image" class="img3" onclick="fun3();"">
+        </div>
+        <p class="classimg3"></p>
+        <div class="box4">
+            <h5>How can I get help if I'm stuck on a challenge</h5>
+            <img src="icon-plus.svg" alt="image" class="img4" onclick="fun4();"">
+        </div>
+        <p class="classimg4"></p>
+    </div>
+    <script>
+        let i=1;
+        function fun1() {
+            let imgdata = document.querySelector(".img1");
+            
+            let newdata = document.querySelector(".classimg1");
+            if (i===1) {
+                newdata.innerHTML = "Frontend Mentor offers realistic coding challenges to help developers improve their frontend coding skills with projects in HTML, CSS and Javascript. It's suitable for all levels and ideal for portfolio building.";
+                 imgdata.src= "icon-minus.svg";
+                 i=2;
+            }
+            else {
+                newdata.innerHTML = " ";
+                imgdata.src= "icon-plus.svg";
+                i=1;
+            }
+
+
+        }
+        function fun2() {
+            let imgdata = document.querySelector(".img2");
+            
+            let newdata = document.querySelector(".classimg2");
+            if (i===1) {
+                newdata.innerHTML = "Yes, Frontend Mentor offers both free and premium coding challenges, with the free option providing access to a range of projects suitable for all skill levels.";
+                 imgdata.src= "icon-minus.svg";
+                 i=2;
+            }
+            else {
+                newdata.innerHTML = " ";
+                imgdata.src= "icon-plus.svg";
+                i=1;
+            }
+
+
+        }
+        function fun3() {
+            let imgdata = document.querySelector(".img3");
+            
+            let newdata = document.querySelector(".classimg3");
+            if (i===1) {
+                newdata.innerHTML = "Yes, you can use projects completed on Frontend Mentor in your portfolio. It's an excellent way to showcase your skills to potential employers!";
+                 imgdata.src= "icon-minus.svg";
+                 i=2;
+            }
+            else {
+                newdata.innerHTML = " ";
+                imgdata.src= "icon-plus.svg";
+                i=1;
+            }
+
+
+        }
+        function fun4() {
+            let imgdata = document.querySelector(".img4");
+            
+            let newdata = document.querySelector(".classimg4");
+            if (i===1) {
+                newdata.innerHTML = "The best place to get help is inside Frontend Mentor's Discord community. There's a help channel where you can ask questions and seek support from other community members.";
+                 imgdata.src= "icon-minus.svg";
+                 i=2;
+            }
+            else {
+                newdata.innerHTML = " ";
+                imgdata.src= "icon-plus.svg";
+                i=1;
+            }
+
+
+        }
+        
+    </script>
+</body>
+
+</html>
